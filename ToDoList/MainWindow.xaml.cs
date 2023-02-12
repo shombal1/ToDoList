@@ -33,7 +33,6 @@ namespace ToDoList
 
         private void datalist_Loaded(object sender, RoutedEventArgs e)
         {
-            Closing += MainWindow_Closing;
             modelList = new BindingList<Model>();
             bool Valib = File.Exists(path);
             if (Valib)

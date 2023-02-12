@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDoList"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" >
-    <Grid >
-        <DataGrid x:Name="datalist" Margin="3" Loaded="datalist_Loaded" AutoGenerateColumns="False"  >
+        Title="MainWindow" Height="450" Width="800" Closing="MainWindow_Closing" >
+    <Grid>
+        <DataGrid x:Name="datalist" Margin="3" Loaded="datalist_Loaded" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="List" Binding="{Binding Path=text}"  Width="100" IsReadOnly="False">
+                <DataGridTextColumn Header="List" Binding="{Binding Path=text}"  Width="*" IsReadOnly="False">
 
                 </DataGridTextColumn>
                 <DataGridCheckBoxColumn Header="Done"  Binding="{Binding Path=chek,UpdateSourceTrigger=PropertyChanged}" Width="100" IsReadOnly="False">
 
                 </DataGridCheckBoxColumn>
-                <DataGridTextColumn Header="Time" Binding="{Binding Path=dateTime}" Width="*" IsReadOnly="True">
+                <DataGridTextColumn Header="Time" Binding="{Binding Path=dateTime}" Width="150" IsReadOnly="True">
 
                 </DataGridTextColumn>
             </DataGrid.Columns>
